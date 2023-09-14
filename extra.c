@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void main()
+int main()
 {
 long long int s,m,h,days,weeks,months,years,decades,century;
 printf("Enter Seconds : ");
@@ -23,15 +23,12 @@ weeks=weeks%4;
 years=months/12;
 months=months%12;
 
-
-//------------------------------------------------------------------------------------------
 for (int i = 1; i<=years; i++)
 {
     if((i%4==0 && i%100!=0)||i%400==0){
         days++;
     }
 }
-//------------------------------------------------------------------------------------------
 
 weeks=weeks + (days/7);
 days=days%7;
@@ -66,6 +63,8 @@ printf("%0.2lld",m);
 printf(" minutes, ");
 printf("%0.2lld",s);
 printf(" seconds, ");
+
+    return 0;
 }
 
 
